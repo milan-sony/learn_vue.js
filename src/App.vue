@@ -11,6 +11,7 @@
   <h1 class="underline" v-bind:class="status">Text Underline</h1>
   <h1 v-bind:class="isPromoted && 'promoted'">Promoted Movie</h1>
   <h1 v-bind:class="isSoldout ? 'sold-out' : 'new'">Sold out movie</h1>
+  <h1 v-bind:class="['new', 'promoted']">New Movie</h1>
 
 </template>
 
