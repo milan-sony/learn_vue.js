@@ -5,6 +5,8 @@
   <div v-bind:id="headingId">Heading</div>
   <button v-bind:disabled="isDisabled">Button</button>
   <h1 class="underline">Text Underline</h1>
+  <h1 v-bind:class="status">Text Underline</h1>
+  <h1 class="underline" v-bind:class="status">Text Underline</h1>
 
 </template>
 
@@ -17,7 +19,8 @@ export default {
       greetings: "Hello",
       name: "MilanSony",
       headingId: 'ID',
-      isDisabled: true
+      isDisabled: true,
+      status: 'danger'
     }
   }
 }
