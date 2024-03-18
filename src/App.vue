@@ -32,6 +32,7 @@
 
   <h2 v-bind:style="headerStyleObj">Style Object</h2>
   <h2 v-bind:style="[headerStyleObj, newStyleObj]">Style array object</h2>
+  <h2 :style="headerStyleObj">v-bind shorthand</h2>
 
 </template>
 
