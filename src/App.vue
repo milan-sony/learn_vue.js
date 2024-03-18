@@ -13,6 +13,11 @@
   <h1 v-bind:class="isSoldout ? 'sold-out' : 'new'">Sold out movie</h1>
   <h1 v-bind:class="['new', 'promoted']">New Movie</h1>
   <h1 v-bind:class="[isPromoted && 'promoted', isSoldout ? 'sold-out' : 'new']">Array condition movie</h1>
+  <h1 v-bind:class="{
+    promoted : isPromoted,
+    new: !isSoldout,
+    'sold-out' : isSoldout
+  }">Object condition movie</h1>
 
 </template>
 
