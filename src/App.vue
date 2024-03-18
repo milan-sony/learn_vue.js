@@ -4,6 +4,7 @@
   <div v-text="name"></div>
   <div v-bind:id="headingId">Heading</div>
   <button v-bind:disabled="isDisabled">Button</button>
+  <h1 class="underline">Text Underline</h1>
 
 </template>
 
@@ -24,5 +25,9 @@ export default {
 </script>
 
 <style>
+
+.underline{
+  text-decoration: underline;
+}
 
 </style>
