@@ -31,6 +31,7 @@
   }">Inline style</h2>
 
   <h2 v-bind:style="headerStyleObj">Style Object</h2>
+  <h2 v-bind:style="[headerStyleObj, newStyleObj]">Style array object</h2>
 
 </template>
 
@@ -53,6 +54,10 @@ export default {
         color: 'Blue',
         'font-size' : '30px',
         padding: '10px'
+      },
+      newStyleObj:{
+        'font-size': '40px',
+        'background-color': 'yellow'
       }
     }
   }
