@@ -33,6 +33,25 @@
       </select>
     </div>
 
+    <div>
+      <input type="checkbox" id="remotework" v-model="formValue.remoteWork" true-value = 'yes' false-value = 'no'>
+      <span>Open to remote work?</span>
+    </div>
+
+    <div>
+      <p>Skills</p>
+      <input type="checkbox" id="html" value="html" v-model="formValue.skillset"><span>HTML</span>
+      <input type="checkbox" id="css" value="css" v-model="formValue.skillset"><span>CSS</span>
+      <input type="checkbox" id="javascript" value="javascript" v-model="formValue.skillset"><span>JavaScript</span>
+    </div>
+    <div>
+
+      <p>Years of exprerience</p>
+      <input type="radio" id="0-2" value="0-2" v-model="formValue.yearsOfExpreience"><span>0-2</span>
+      <input type="radio" id="3-5" value="3-5" v-model="formValue.yearsOfExpreience"><span>3-5</span>
+      <input type="radio" id="6-10" value="6-10" v-model="formValue.yearsOfExpreience"><span>6-10</span>
+    </div>
+
   </form>
 
 </template>
@@ -47,7 +66,10 @@ export default {
         name: '',
         profileSummary: '',
         country: '',
-        jobLocation: []
+        jobLocation: [],
+        remoteWork: 'no',
+        skillset: [],
+        yearsOfExpreience: ''
       }
     }
   },
@@ -58,4 +80,6 @@ export default {
 
 </script>
 
-<style></style>
+<style>
+
+</style>
