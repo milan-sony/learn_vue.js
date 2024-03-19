@@ -2,7 +2,7 @@
 
   <h2>{{ name }}</h2>
   <div>
-    <button v-on:click="changeName(), increment(1)">Change name</button>
+    <button @:click="changeName(), increment(1)">Change name</button>
   </div>
 
   <h2>{{ count }}</h2>
