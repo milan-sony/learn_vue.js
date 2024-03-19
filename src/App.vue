@@ -1,8 +1,8 @@
 <template>
 
-  <h2 v-for="name in names" :key="name">{{ name }}</h2>
-  <h2 v-for="(name, index) in names" :key="name">{{index}} {{ name }}</h2>
-  <h2 v-for="(name, index) in names" :key="name">{{index + 1}} {{ name }}</h2>
+  <h2>{{ 10 + 20 }}</h2>
+
+  <h2>Add method {{ add() }}</h2>
 
 </template>
 
@@ -12,9 +12,15 @@ export default {
   name: "App",
   data() {
     return {
-      names: ['milan', 'sony']
+
+    }
+  },
+  methods:{
+    add(){
+      return 2+3+5
     }
   }
+
 }
 
 </script>
