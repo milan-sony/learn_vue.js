@@ -4,7 +4,7 @@
     {{ JSON.stringify(formValue, null, 2) }}
   </pre>
 
-  <form>
+  <form @submit="submitForm">
 
     <div>
       <p>Name</p>
@@ -52,6 +52,10 @@
       <input type="radio" id="6-10" value="6-10" v-model="formValue.yearsOfExpreience"><span>6-10</span>
     </div>
 
+    <div>
+      <button>SUMBIT</button>
+    </div>
+
   </form>
 
 </template>
@@ -74,7 +78,10 @@ export default {
     }
   },
   methods: {
-
+    submitForm(event){
+      event.preventDefault()
+      console.log('Form Values', this.formValue)
+    }
   }
 }
 
