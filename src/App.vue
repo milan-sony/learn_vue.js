@@ -2,7 +2,7 @@
 
   <h2>{{ name }}</h2>
   <div>
-    <button v-on:click="name = 'sony'">Change name</button>
+    <button v-on:click="changeName(), increment(1)">Change name</button>
   </div>
 
   <h2>{{ count }}</h2>
@@ -26,6 +26,9 @@ export default {
     }
   },
   methods:{
+    changeName(){
+      this.name = "Sony"
+    },
     increment(num){
       this.count += num
     },
