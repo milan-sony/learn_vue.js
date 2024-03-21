@@ -2,10 +2,7 @@
 
   <h2>Fullname: {{ firstName }} {{ lastName }}</h2>
   <h2>Computed fullname: {{ fullName }}</h2>
-
-  <h2>Computed total: {{ total }}</h2>
-  <h2>Method Total: {{ getTotal() }}</h2>
-  <input type="text" v-model="country">
+  <button @click="changeFullName">Change Name</button>
 
 </template>
 
@@ -17,40 +14,25 @@ export default {
     return {
       firstName: 'Milan',
       lastName: 'Sony',
-      items: [
-        {
-          id: 1,
-          title: 'TV',
-          price: 100
-        },
-        {
-          id: 1,
-          title: 'Phone',
-          price: 200
-        },
-        {
-          id: 1,
-          title: 'Laptop',
-          price: 300
-        },
-      ],
-      country: ''
     }
   },
   methods: {
-    getTotal(){
-      console.log('getTotal()')
-      return this.items.reduce((total, curr) => (total = total + curr.price), 0)
+    changeFullName(){
+      this.fullName = 'Milosh Sony'
     }
-
   },
   computed:{
-    fullName(){
-      return `${this.firstName} ${this.lastName}`
-    },
-    total(){
-      console.log('total()')
-      return this.items.reduce((total, curr) => (total = total + curr.price), 0)
+    fullName:{
+      // getter : read computed property value
+      get(){
+        return `${this.firstName} ${this.lastName}`
+      },
+      // setter : set() is called when new value is assigned into the computed property
+      set(value){
+        const names = value.split(' ')
+        this.firstName = names[0]
+        this.lastName = names[1]
+      }
     }
   }
 }
