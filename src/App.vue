@@ -1,8 +1,11 @@
 <template>
 
-  <h2>Fullname: {{ firstName }} {{ lastName }}</h2>
-  <h2>Computed fullname: {{ fullName }}</h2>
-  <button @click="changeFullName">Change Name</button>
+  <h2>Volume Tracker (0-20)</h2>
+  <h2>Current Volume {{ volume }}</h2>
+  <div>
+    <button @click="volume += 2">Increase</button>
+    <button @click="volume -= 2">Decrease</button>
+  </div>
 
 </template>
 
@@ -12,26 +15,19 @@ export default {
   name: "App",
   data() {
     return {
-      firstName: 'Milan',
-      lastName: 'Sony',
+      volume: 0
     }
   },
   methods: {
-    changeFullName(){
-      this.fullName = 'Milosh Sony'
-    }
+
   },
-  computed:{
-    fullName:{
-      // getter : read computed property value
-      get(){
-        return `${this.firstName} ${this.lastName}`
-      },
-      // setter : set() is called when new value is assigned into the computed property
-      set(value){
-        const names = value.split(' ')
-        this.firstName = names[0]
-        this.lastName = names[1]
+  computed: {
+
+  },
+  watch: {
+    volume(newValue, oldValue) {
+      if (newValue > oldValue && newValue === 16) {
+        alert("Volume above 16")
       }
     }
   }
@@ -39,6 +35,4 @@ export default {
 
 </script>
 
-<style>
-
-</style>
+<style></style>
