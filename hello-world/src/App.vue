@@ -6,6 +6,7 @@
     <button @click="volume += 2">Increase</button>
     <button @click="volume -= 2">Decrease</button>
   </div>
+  <input type="text" v-model="movie">
 
 </template>
 
@@ -15,7 +16,8 @@ export default {
   name: "App",
   data() {
     return {
-      volume: 0
+      volume: 0,
+      movie: 'Batman'
     }
   },
   methods: {
@@ -29,6 +31,12 @@ export default {
       if (newValue > oldValue && newValue === 16) {
         alert("Volume above 16")
       }
+    },
+    movie:{
+      handler(newValue){
+        console.log(`Calling an API with the movie name = ${newValue}`)
+      },
+      immediate: true
     }
   }
 }
