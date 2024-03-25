@@ -1,18 +1,23 @@
 <template>
-  <GreetME />
+  <GreetMe name="Milan" />
+  <GreetMe :name="name" :email="email" />
 </template>
 
 <script>
-import GreetME from './components/Greet.vue'
+import GreetMe from './components/Greet.vue'
 
 export default {
   name: 'App',
-  components:{
-    GreetME
+  components: {
+    GreetMe
+  },
+  data() {
+    return {
+      name: 'milosh',
+      email: 'milosh@gmail.com'
+    }
   }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -1,9 +1,13 @@
 <template>
-    <h2>Hello Milan</h2>
+    <h2>Hello {{ name }} Email: {{ email }}</h2>
 </template>
 
 <script>
-export default{
-    name: 'GreetMe'
+export default {
+    name: 'GreetMe',
+    props: [
+        'name',
+        'email'
+    ]
 }
 </script>
