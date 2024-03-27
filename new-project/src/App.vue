@@ -1,25 +1,23 @@
 <template>
-  
-  <ComponentC />
+
+  <button @click="showPopup = true">show popup</button>
+  <PopUp v-show="showPopup" @close="showPopup = false" />
 
 </template>
 
 <script>
 
-import ComponentC from './components/ComponentC.vue';
+import PopUp from './components/Popup.vue'
 
 export default {
   name: 'App',
   data() {
     return {
-
+      showPopup: false
     }
   },
-  components: {
-    ComponentC
-  },
-  provide:{
-    username: 'Milan'
+  components:{
+    PopUp
   }
 }
 </script>
