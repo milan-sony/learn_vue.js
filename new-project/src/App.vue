@@ -1,7 +1,7 @@
 <template>
 
   <button @click="showPopup = true">show popup</button>
-  <PopUp v-show="showPopup" @close="showPopup = false" />
+  <PopUp v-show="showPopup" @close="closePopup" />
 
 </template>
 
@@ -16,8 +16,14 @@ export default {
       showPopup: false
     }
   },
-  components:{
+  components: {
     PopUp
+  },
+  methods: {
+    closePopup(name) {
+      this.showPopup = false
+      console.log('Name: ', name)
+    }
   }
 }
 </script>
