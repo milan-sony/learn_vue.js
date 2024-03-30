@@ -1,21 +1,33 @@
 <template>
-  <CardVue></CardVue>
-  <CardVue>hello</CardVue>
-  <CardVue><h1>Milan Sony</h1></CardVue>
+  <button @click="activeTab = 'TabA'">Tab A</button>
+  <button @click="activeTab = 'TabB'">Tab B</button>
+  <button @click="activeTab = 'TabC'">Tab C</button>
+
+  <div>
+    <TabA v-if="activeTab === 'TabA'" />
+    <TabB v-if="activeTab === 'TabB'" />
+    <TabC v-if="activeTab === 'TabC'" />
+  </div>
+
 </template>
 
 <script>
 
-import CardVue from './components/Card.vue'
+import TabA from './components/TabA.vue'
+import TabB from './components/TabB.vue'
+import TabC from './components/TabC.vue'
 
 export default {
   name: 'App',
   data() {
     return {
+      activeTab: 'TabA'
     }
   },
   components: {
-    CardVue
+    TabA,
+    TabB,
+    TabC
   },
   methods: {
 
