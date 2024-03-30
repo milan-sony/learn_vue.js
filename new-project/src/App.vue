@@ -1,4 +1,5 @@
 <template>
+  <CardVue></CardVue>
   <CardVue>hello</CardVue>
   <CardVue><h1>Milan Sony</h1></CardVue>
 </template>
