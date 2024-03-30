@@ -1,31 +1,26 @@
 <template>
-
-  <button @click="showPopup = true">show popup</button>
-  <PopUp v-show="showPopup" @close="closePopup" />
-
+  <CardVue>hello</CardVue>
+  <CardVue><h1>Milan Sony</h1></CardVue>
 </template>
 
 <script>
 
-import PopUp from './components/Popup.vue'
+import CardVue from './components/Card.vue'
 
 export default {
   name: 'App',
   data() {
     return {
-      showPopup: false
     }
   },
   components: {
-    PopUp
+    CardVue
   },
   methods: {
-    closePopup(name) {
-      this.showPopup = false
-      console.log('Name: ', name)
-    }
+
   }
 }
+
 </script>
 
 <style></style>
