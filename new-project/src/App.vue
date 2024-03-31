@@ -1,10 +1,10 @@
 <template>
-  <GetData/>
+  <TemplateRef/>
 </template>
 
 <script>
 
-import GetData from './components/GetData.vue'
+import TemplateRef from './components/TemplateRef.vue'
 
 export default {
   name: 'App',
@@ -13,7 +13,7 @@ export default {
     }
   },
   components: {
-    GetData
+    TemplateRef
   },
 }
 
