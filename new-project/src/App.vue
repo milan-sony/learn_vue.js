@@ -1,10 +1,10 @@
 <template>
-  <ParentComponent />
+  <GetData/>
 </template>
 
 <script>
 
-import ParentComponent from './components/Parent.vue'
+import GetData from './components/GetData.vue'
 
 export default {
   name: 'App',
@@ -13,7 +13,7 @@ export default {
     }
   },
   components: {
-    ParentComponent
+    GetData
   },
 }
 
